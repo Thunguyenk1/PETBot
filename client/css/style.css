@@ -47,6 +47,7 @@ section:nth-child(even) {
   font-size: 3rem;
   padding-bottom: 2rem;
   text-transform: uppercase;
+
 }
 
 .btn {
@@ -218,13 +219,13 @@ header .icons #menu-bars {
   background: var(--green);
 }
 
-.dishes .box-container {
+.product .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
   gap: 1.5rem;
 }
 
-.dishes .box-container .box{
+.product .box-container .box{
   padding: 2.5rem;
   background: #fff;
   border-radius: .5rem;
@@ -235,8 +236,8 @@ header .icons #menu-bars {
   text-align: center;
 }
 
-.dishes .box-container .box .fa-heart,
-.dishes .box-container .box .fa-eye {
+.product .box-container .box .fa-heart,
+.product .box-container .box .fa-eye {
   position: absolute;
   top: 1.5rem;
   background: #eee;
@@ -248,49 +249,49 @@ header .icons #menu-bars {
   color: var(--black);
 }
 
-.dishes .box-container .box .fa-heart:hover,
-.dishes .box-container .box .fa-eye:hover {
+.product .box-container .box .fa-heart:hover,
+.product .box-container .box .fa-eye:hover {
   background: var(--green);
   color: #fff;
 }
 
-.dishes .box-container .box .fa-heart {
+.product .box-container .box .fa-heart {
   right: -15rem;
 }
 
-.dishes .box-container .box .fa-eye {
+.product .box-container .box .fa-eye {
   left: -15rem;
 }
 
-.dishes .box-container .box:hover .fa-heart {
+.product .box-container .box:hover .fa-heart {
   right: 1.5rem;
 }
 
-.dishes .box-container .box:hover .fa-eye {
+.product .box-container .box:hover .fa-eye {
   left: 1.5rem;
 }
 
-.dishes .box-container .box img {
+.product .box-container .box img {
   height: 17rem;
   margin: 1rem 0;
   width: 100%;
 }
 
-.dishes .box-container .box h3 {
+.product .box-container .box h3 {
   color: var(--black);
   font-size: 2.5rem;
 }
 
-.dishes .box-container .box .stars {
+.product .box-container .box .stars {
   padding: 1rem 0;
 }
 
-.dishes .box-container .box .stars i {
+.product .box-container .box .stars i {
   font-size: 1.7rem;
   color: var(--green);
 }
 
-.dishes .box-container .box span {
+.product .box-container .box span {
   color: var(--green);
   font-weight: bolder;
   margin-right: 1rem;
@@ -363,6 +364,10 @@ header .icons #menu-bars {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap:1.5rem;
+}
+
+.menu .sub-heading {
+  margin-top: 50px;
 }
 
 .menu .box-container .box {
