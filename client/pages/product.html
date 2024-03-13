@@ -23,8 +23,8 @@
         <nav class="navbar">
             <a href="../index.html">Home</a>
             <a class="active" href="./product.html">Products</a>
-            <a href="#">Orders</a>
-            <a href="#">About Us</a>
+            <a href="./about.html">About Us</a>
+            <a href="./review.html">Review</a>
             <a href="./contact.html">Contact Us</a>
         </nav>
 
@@ -50,14 +50,16 @@
         <h3 class="sub-heading">our menu</h3>
         <h1 class="heading">today's speciality</h1>
         <div class="row">
-            <h2>All Products</h2>
-            <select>
-                <option>Default Shorting</option>
-                <option>Short by price</option>
-                <option>Short by popularity</option>
-                <option>Short by rating</option>
-                <option>Short by sale</option>
-            </select>
+            <form class="ordering" method="get">
+                <select name="orderby" class="orderby" aria-label="Đơn hàng của cửa hàng">
+                    <option value="popularity">Thứ tự theo mức độ phổ biến</option>
+                    <option value="rating">Thứ tự theo điểm đánh giá</option>
+                    <option value="date" selected="selected">Mới nhất</option>
+                    <option value="price">Thứ tự theo giá: thấp đến cao</option>
+                    <option value="price-desc">Thứ tự theo giá: cao xuống thấp</option>
+                </select>
+                <input type="hidden" name="paged" value="1">
+            </form>
         </div>
         <div class="box-container">
             <div class="box">
@@ -292,8 +294,25 @@
                 </div>
             </div>
         </div>
+
+        <div class="container">
+            <nav class="pagination">
+                <ul class="page-numbers nav-pagination">
+                    <li><span aria-current="page" class="page-number current">1</span></li>
+                    <li><a class="page-number" href="#">2</a></li>
+                    <li><a class="page-number" href="#">3</a></li>
+                    <li><a class="page-number" href="#">4</a></li>
+                    <li><span class="page-number dots">…</span></li>
+                    <li><a class="page-number" href="#">81</a></li>
+                    <li><a class="page-number" href="#">82</a></li>
+                    <li><a class="page-number" href="#">83</a></li>
+                    <li><a class="next page-number" href="#"><i class="icon-angle-right"></i></a></li>
+                </ul>
+            </nav>
+        </div>
     </section>
     <!-- menu section ends -->
+
 
     <!-- footer section starts -->
     <section class="footer" id="footer">
