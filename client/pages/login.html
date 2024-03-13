@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../css/style.css">
 
 </head>
-<body>
+<>
 
     <!-- header section starts -->
     <header>
@@ -102,12 +102,12 @@
             <div class="inputBox">
                 <div class="input">
                     <span>Username: </span>
-                    <input type="text" placeholder="Your Username" id="username" required>
+                    <input type="text" name="username" placeholder="Your Username" id="username" required>
                 </div>
                 <div class="input">
                     <span>Password: </span>
                     <div class="passform">
-                        <input type="password" placeholder="Your password" id="password">
+                        <input type="password" name="password" placeholder="Your password" id="password">
                         <i class="far fa-eye" id="togglePassword"></i>  
                     </div>
                 </div>
@@ -133,6 +133,48 @@
             }
         });
     </script>
+
+    <?php
+        $servername = "localhost";
+        $username = "username";
+        $password = "password";
+        $dbname = "myDB";
+        
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        
+        // Check connection
+        if ($conn->connect_error) {
+          die("Connection failed: " . $conn->connect_error);
+        }
+        
+        // Get the values from the form
+        $loginUsername = $_POST['username'];
+        $loginPassword = $_POST['password'];
+        
+        // Create the SQL query
+        $sql = "SELECT * FROM users WHERE username = ? AND password = ?";
+        
+        // Prepare and bind
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ss", $loginUsername, $loginPassword);
+        
+        // Execute the statement
+        $stmt->execute();
+        
+        // Get the result
+        $result = $stmt->get_result();
+        
+        // Check if we have a result
+        if ($result->num_rows > 0) {
+          echo "Login successful!";
+        } else {
+          echo "Username or password is incorrect.";
+        }
+        
+        $stmt->close();
+        $conn->close();
+    ?>
 
     <section></section>
 
