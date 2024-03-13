@@ -696,6 +696,7 @@ header .icons #menu-bars {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     gap: 1.5rem;
+    margin-top: 60px;
 }
 
 .footer .box-container .box h3 {
@@ -764,6 +765,163 @@ header .icons #menu-bars {
   padding-top: 0;
 } */
 
+.cart {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+
+}
+
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 20px;
+  border-bottom: 2px solid #ccc;
+  text-align: left;
+  font-size: 16px;
+}
+
+.cart-table th {
+  background-color: #f2f2f2;
+}
+
+.cart-table img {
+  width: 300px;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+.title-product{
+  padding-top:10px;
+  text-align: center;
+}
+
+.cart-summary {
+  margin-top: 20px;
+  text-align: right;
+}
+
+.cart-summary p {
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 15px 30px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-remove {
+  padding: 10px 20px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.total-price{
+  font-size:20px;
+  margin-bottom:20px;
+}                                                                                                               
+.item-image{
+  flex-direction: column;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .cart {
+      padding: 10px;
+  }
+
+  .cart-table th,
+  .cart-table td {
+      padding: 10px;
+      font-size: 14px;
+  }
+
+  .cart-table img {
+      width: 80px;
+   
+  }
+
+  .title-product {
+      padding-top: 5px;
+      font-size: 18px;
+  }
+
+  .btn,
+  .btn-remove {
+      padding: 5px 10px;
+      font-size: 12px;
+  }
+
+  .total-price {
+      font-size: 16px;
+      margin-bottom: 10px;
+  }
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.section-header-left {
+  flex: 1;
+}
+
+.section-header-right {
+  flex: 1;
+}
+
+.section-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact {
+  margin-bottom: 20px;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 18px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  margin-left: 40px;
+}
+
+
+
 
 
 
@@ -799,42 +957,45 @@ header .icons #menu-bars {
 }
 
 @media (max-width: 768px) {
-    header .icons #menu-bars {
-        display: inline-block;
-    }
+  header .icons #menu-bars {
+    display: inline-block;
+  }
 
-    header .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: #fff;
-        border-top: .1rem solid rgba(0, 0, 0, .2);
-        border-bottom: .1rem solid rgba(0, 0, 0, .2);
-        padding: 1rem;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: .1rem solid rgba(0, 0, 0, .2);
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+    padding: 1rem;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
 
-    header .navbar.active {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
 
-    header .navbar a {
-        display: block;
-        padding: 1.5rem;
-        margin: 1rem;
-        font-size: 2rem;
-        background: #eee;
-    }
+  header .navbar a {
+    display: block;
+    padding: 1.5rem;
+    margin: 1rem;
+    font-size: 2rem;
+    background: #eee;
+  }
 
-    #search-form #search-box {
-        width: 90%;
-        margin: 0 1rem;
-    }
+  #search-form #search-box {
+    width: 90%;
+    margin: 0 1rem;
+  }
 
-    .home .home-slider .slide .content h3 {
-        font-size: 5rem;
-    }
+  .home .home-slider .slide .content h3 {
+      font-size: 5rem;
+  }
+  .contact-info {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 450px) {
