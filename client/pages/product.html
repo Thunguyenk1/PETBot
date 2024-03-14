@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Products - PETBOT</title>
 
+    <!-- Link Tailwindcss CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    
+    <!-- Link Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
@@ -47,19 +55,62 @@
 
     <!-- menu section starts -->
     <section class="menu" id="menu">
-        <h3 class="sub-heading">our menu</h3>
-        <h1 class="heading">today's speciality</h1>
-        <div class="row">
-            <form class="ordering" method="get">
-                <select name="orderby" class="orderby" aria-label="Đơn hàng của cửa hàng">
-                    <option value="popularity">Thứ tự theo mức độ phổ biến</option>
-                    <option value="rating">Thứ tự theo điểm đánh giá</option>
-                    <option value="date" selected="selected">Mới nhất</option>
-                    <option value="price">Thứ tự theo giá: thấp đến cao</option>
-                    <option value="price-desc">Thứ tự theo giá: cao xuống thấp</option>
-                </select>
-                <input type="hidden" name="paged" value="1">
-            </form>
+        <div class="container">
+            <!-- menu banner -->
+            <div class="menu-banner">
+              <div class="row flex flex-col items-center justify-center py-48">
+                <!-- {/* content */} -->
+                <div class="px-4 text-center  space-y-7">
+                  <h2 class="text-4xl font-bold leading-snug md:text-5xl md:leading-snug">
+                    For a love <span style="color: rgb(19, 244, 19);">recycled </span> plastic bottles
+                  </h2>
+                  <p style="color: #4A4A4A;" class="text-xl md:w-4/5 mx-auto">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, sequi corrupti
+                    corporis quaerat voluptatem ipsam neque labore modi autem, saepe numquam quod
+                    reprehenderit rem? Tempora aut soluta odio corporis nohil!
+                  </p>
+                  <button class="px-8 py-3 font-semibold text-white rounded-full bg-green btn">
+                    Order now
+                  </button>
+                </div>
+              </div>
+            </div>
+      
+            <!-- menu shop -->
+            <div class="section-container">
+              <div class="flex flex-col flex-wrap items-center mb-8 space-y-3 md:flex-row md:justify-between">
+                
+                 <!-- all category buttons -->
+                <div class="flex flex-row flex-wrap justify-start text-2xl gap-8 md:items-center md:gap-8 inline-flex">
+                  <button type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">All</button>
+                  <button type="button" class="hover:bg-blue-700 hover:text-white hover:font-bold py-2 px-4 rounded-full">PET bottles</button>
+                  <button type="button" class="hover:bg-blue-700 hover:text-white hover:font-bold py-2 px-4 rounded-full">PP bottles</button>
+                  <button type="button" class="hover:bg-blue-700 hover:text-white hover:font-bold py-2 px-4 rounded-full">PC bottles</button>
+                  <button type="button" class="hover:bg-blue-700 hover:text-white hover:font-bold py-2 px-4 rounded-full">Jars</button>
+                </div>
+      
+                  <!-- filter options -->
+                <div class="flex justify-end mb-4 rounded-sm">
+                  <div class="p-2 bg-black">
+                    <i class="fa fa-filter w-4 h-4 text-white" aria-hidden="true"></i>
+                  </div>
+                  <select id="sort" class="text-2xl">
+                    <option value="default"> Default</option>
+                    <option value="A-Z">A-Z</option>
+                    <option value="Z-A">Z-A</option>
+                    <option value="low-to-high">Low to high</option>
+                    <option value="high-to-low">High to low</option>
+                  </select>
+                </div>
+              </div>
+      
+              <!-- product card -->
+              <div class="grid grid-cols-1 gap-4 md:grid-cols-4 sm:grid-cols-2 "></div>
+            </div>
+      
+             <!-- Pagination -->
+             <div class="flex flex-wrap justify-center gap-2 my-8">
+            </div>
         </div>
         <div class="box-container">
             <div class="box">
@@ -294,24 +345,24 @@
                 </div>
             </div>
         </div>
-
-        <div class="container">
-            <nav class="pagination">
-                <ul class="page-numbers nav-pagination">
-                    <li><span aria-current="page" class="page-number current">1</span></li>
-                    <li><a class="page-number" href="#">2</a></li>
-                    <li><a class="page-number" href="#">3</a></li>
-                    <li><a class="page-number" href="#">4</a></li>
-                    <li><span class="page-number dots">…</span></li>
-                    <li><a class="page-number" href="#">81</a></li>
-                    <li><a class="page-number" href="#">82</a></li>
-                    <li><a class="page-number" href="#">83</a></li>
-                    <li><a class="next page-number" href="#"><i class="icon-angle-right"></i></a></li>
-                </ul>
-            </nav>
-        </div>
+        
     </section>
     <!-- menu section ends -->
+
+    <!-- Pagination -->
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+          <li class="page-item disabled">
+            <a class="page-link text-2xl" href="#" tabindex="-1">Previous</a>
+          </li>
+          <li class="page-item text-2xl"><a class="page-link text-2xl" href="#">1</a></li>
+          <li class="page-item text-2xl"><a class="page-link text-2xl" href="#">2</a></li>
+          <li class="page-item text-2xl"><a class="page-link text-2xl" href="#">3</a></li>
+          <li class="page-item text-2xl">
+            <a class="page-link text-2xl" href="#">Next</a>
+          </li>
+        </ul>
+    </nav>
 
 
     <!-- footer section starts -->
