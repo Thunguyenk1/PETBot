@@ -2,30 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
+    <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.0/font/bootstrap-icons.css">
+    <!-- slick -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- css -->
     <link rel="stylesheet" href="main.css">
-
 </head>
 <body>
 
     <section class="popular-brands">
         <h2>POPULAR BRANDS</h2>
-        <div class="controls">
+        <div class="control">
             <i class="bi bi-chevron-left left"></i>
             <i class="bi bi-chevron-right right"></i>
         </div>
+        <?php 
+            if(isset($message)){
+                foreach($message as $message) {
+                    echo '
+                        <div class="message">
+                            <span>'.$message.'</span>
+                            <i class="bi bi-x-circle" onclick="this.parentElement.remove()"></i>
+                        </div>
+                    ';
+                }
+            }
+        ?>
+        
         <div class="popular-brands-content">
             <?php 
                 $select_products = mysqli_query($conn, "SELECT * FROM `products`") or die('query failed');
                 if(mysqli_num_rows($select_products)>0) {
                   while($fetch_products = mysqli_fetch_assoc($select_products)){
             ?>
-            <form action="" method="post" class="card">
+            <form method="POST" class="card">
                 <img src="image/<?php echo $fetch_products['image']; ?>">
-                <div class="price"><?php echo $fetch_products['price']; ?></div>
+                <div class="price">$<?php echo $fetch_products['price']; ?>/-</div>
                 <div class="name"><?php echo $fetch_products['name']; ?></div>
                 <input type="hidden" name="product_id" value="<?php echo $fetch_products['id']; ?>">
                 <input type="hidden" name="product_name" value="<?php echo $fetch_products['name']; ?>">
@@ -47,9 +63,9 @@
         </div>
     </section>
 
-
-    <script src="jquary.js"></script>
-    <script src="slick.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script type="text/javascript">
         $('.popular-brands-content').slick({
@@ -82,9 +98,6 @@
                     slidesToScroll: 1
                 }
                 }
-                // You can unslick at a given breakpoint now by adding:
-                // settings: "unslick"
-                // instead of a settings object
             ]
             });
     </script>

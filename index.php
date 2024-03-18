@@ -108,8 +108,7 @@
         </div>
     </div>
 
-    <div class="line"></div>
-
+    <!-- servies -->
     <div class="services">
         <div class="row">
             <div class="box">
@@ -137,6 +136,7 @@
     </div>
     <div class="line2"></div>
 
+    <!-- story -->
     <div class="story">
         <div class="row">
             <div class="box">
@@ -153,7 +153,7 @@
             </div>
             <div class="box">
                 <!-- <img src="img/8.png" alt=""> -->
-                <img src="https://www.dicota.com/media/mageplaza/blog/post/p/e/pet_recycling_banner.jpg" alt="">
+                <img src="https://png.pngtree.com/background/20231018/original/pngtree-large-plastic-water-bottle-for-drinking-isolated-on-white-background-in-picture-image_5597703.jpg" alt="">
             </div>
         </div>
     </div>
@@ -228,10 +228,6 @@
             </p>
             <a href="shop.php" class="btn">discover now</a>
         </div>
-        <div class="img-box">
-            <!-- <img src="img/13.png" alt=""> -->
-            <img src="https://www.dfupublications.com/images/2022/07/14/Pet%20Bottle-Recycling.webp" alt="">
-        </div>
     </div>
     <?php include 'homeshop.php'; ?>
     <div class="line2"></div>
@@ -241,37 +237,7 @@
         <input type="text" name="" placeholder="your Email Address...">
         <button>subscribe now</button>
     </div>
-    <div class="line3"></div>
-    <div class="client">
-        <div class="box">
-            <!-- <img src="img/client0.png" alt=""> -->
-            <img src="https://www.dosenprofi.com/content/products/86400013_01.png" alt="">
-        </div>
-        <div class="box">
-            <!-- <img src="img/client1.png" alt=""> -->
-            <img src="https://www.dosenprofi.com/content/products/86400013_01.png" alt="">
-
-        </div>
-        <div class="box">
-            <!-- <img src="img/client2.png" alt=""> -->
-            <img src="https://www.dosenprofi.com/content/products/86400013_01.png" alt="">
-
-        </div>
-        <div class="box">
-            <!-- <img src="img/client3.png" alt=""> -->
-            <img src="https://www.dosenprofi.com/content/products/86400013_01.png" alt="">
-
-        </div>
-        <div class="box">
-            <!-- <img src="img/client4.png" alt=""> -->
-            <img src="https://www.dosenprofi.com/content/products/86400013_01.png" alt="">
-
-        </div>
-    </div>
-
-
-
-
+    
     <?php include 'footer.php'; ?>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>

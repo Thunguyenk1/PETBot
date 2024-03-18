@@ -40,7 +40,7 @@
         <div class="detail">
             <h1>about us</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-            <a href="index.php">home </a><span> about us</span>
+            <a href="index.php">home </a><span>/ about us</span>
         </div>
     </div>
     <div class="line"></div>

@@ -173,8 +173,6 @@
             <input type="file" name="update_image" accept="image/jpg, image/jpeg, image/png, image/webp">
             <input type="submit" name="update_product" value="update" class="edit">
             <input type="reset" name="" value="cancle" class="option-btn btn" id="close-form">
-
-
         </form>
         <?php 
                     }
