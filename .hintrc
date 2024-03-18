@@ -3,17 +3,12 @@
     "development"
   ],
   "hints": {
-    "axe/name-role-value": [
+    "compat-api/css": [
       "default",
       {
-        "link-name": "off"
-      }
-    ],
-    "axe/forms": [
-      "default",
-      {
-        "label": "off",
-        "select-name": "off"
+        "ignore": [
+          "backdrop-filter"
+        ]
       }
     ]
   }
