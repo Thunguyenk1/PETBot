@@ -193,7 +193,7 @@ input[type=submit] {
 .form-container form button {
     width: 85%;
     background: var(--orange);
-    border: black;
+    border: none;
 }
 
 /* banner */
